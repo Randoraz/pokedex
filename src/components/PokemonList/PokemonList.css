@@ -9,6 +9,7 @@
     flex-wrap: wrap;
     height: 120rem;
     width: 100%;
+    justify-content: flex-start;
     align-items: center;
     text-align: left;
     padding-inline-start: 0;
@@ -26,6 +27,6 @@
     margin: 0.8rem 1.6rem 0.8rem 1.6rem;
     list-style: decimal;
     text-align: left;
-    color: hsl(0, 100%, 70%);
+    color: hsl(0, 100%, 60%);
     text-decoration: none;
 }

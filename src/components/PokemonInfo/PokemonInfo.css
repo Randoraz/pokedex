@@ -1,16 +1,45 @@
 .pokemon-info {
     text-align: center;
+    margin: auto;
+    background-image: url("../../images/pokedex-big.png");
+    background-size: 104.7rem 74.8rem;
+    background-repeat: no-repeat;
+    width: 75%;
+    height: 74.8rem;
+    position: relative;
 }
 
-.pokemon-info .h2 {
+.pokemon-info h2 {
     font-size: 3.2rem;
+    font-weight: 400;
+    position: absolute;
+    top: 35%;
+    left: 65%;
 }
 
 .pokemon-info .p {
     font-size: 2.4rem;
 }
 
+.pokemon-info .id {
+    position: absolute;
+    top: 83%;
+    left: 18.5%;
+}
+
 .pokemon-info .button {
     text-align: center;
     margin: 0.8rem auto;
+}
+
+.pokemon-info .prev {
+    position: absolute;
+    top: 85%;
+    left: 69rem;
+}
+
+.pokemon-info .next {
+    position: absolute;
+    top: 85%;
+    left: 87rem;
 }

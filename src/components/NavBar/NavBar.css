@@ -1,5 +1,5 @@
 .navbar {
-    background-color: hsl(20, 100%, 70%);
+    background-color: hsl(0, 100%, 60%);
     padding: 1.6rem;
     display: flex;
     justify-content: space-around;
@@ -14,6 +14,7 @@
 }
 
 .active-navlink {
-    background-color: hsl(0, 100%, 70%);
+    background-color: white;
+    color: black;
     border-radius: 30%;
 }

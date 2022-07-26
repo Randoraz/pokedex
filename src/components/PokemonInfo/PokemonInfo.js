@@ -51,8 +51,8 @@ export function PokemonInfo() {
     return (
         foundPokemon ? //Use ? to check if variable exists before using 'map'
         <div className="pokemon-info"> 
-            <h2 className="h2">{captalizeFirstLetter(pokemon.name)}</h2>
-            <p className="p">{pokemon.id}</p>
+            <h2>{captalizeFirstLetter(pokemon.name)}</h2>
+            <p className="p id">{pokemon.id}</p>
             <div>
                 {pokemon.types.map(type => {
                     return <p className="p" key={type.slot}>{captalizeFirstLetter(type.type.name)}</p>;
@@ -63,11 +63,11 @@ export function PokemonInfo() {
                     className="input"
                     type='text'
                     value={term}
-                    placeholder='Search name or number'
+                    placeholder='name or number'
                     onChange={handleChange} />
             </form>
-            <button className="button" onClick={prevButton}>Prev</button>
-            <button className="button" onClick={nextButton}>Next</button>
+            <button className="button prev" onClick={prevButton}>Prev</button>
+            <button className="button next" onClick={nextButton}>Next</button>
         </div>
         :
         <div className="pokemon-info">
@@ -76,7 +76,7 @@ export function PokemonInfo() {
                     className="input"
                     type='text'
                     value={term}
-                    placeholder='Search name or number'
+                    placeholder='name or number'
                     onChange={handleChange} />
             </form>
         </div>
