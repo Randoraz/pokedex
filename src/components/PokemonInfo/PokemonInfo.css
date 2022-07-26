@@ -1,0 +1,16 @@
+.pokemon-info {
+    text-align: center;
+}
+
+.pokemon-info .h2 {
+    font-size: 3.2rem;
+}
+
+.pokemon-info .p {
+    font-size: 2.4rem;
+}
+
+.pokemon-info .button {
+    text-align: center;
+    margin: 0.8rem auto;
+}

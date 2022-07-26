@@ -1,0 +1,31 @@
+.pokemon-list .h3 {
+    text-align: center;
+    font-size: 2.4rem;
+}
+
+.pokemon-list .list {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 120rem;
+    width: 100%;
+    align-items: center;
+    text-align: left;
+    padding-inline-start: 0;
+}
+
+.pokemon-list .pokemon {
+    margin-left: 3.2rem;
+    font-size: 2.4rem;
+    text-align: left;
+    width: 15%;
+}
+
+.pokemon-list .pokemon-link {
+    font-size: 2.4rem;
+    margin: 0.8rem 1.6rem 0.8rem 1.6rem;
+    list-style: decimal;
+    text-align: left;
+    color: hsl(0, 100%, 70%);
+    text-decoration: none;
+}

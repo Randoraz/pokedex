@@ -3,7 +3,9 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { NavBar } from '../NavBar/NavBar';
 import { Home } from '../Home/Home'
-import { Categories } from '../Categories/Categories';
+import { Types } from '../Types/Types';
+import { SearchBar } from '../SearchBar/SearchBar';
+import { PokemonInfo } from '../PokemonInfo/PokemonInfo';
 
 function App() {
   return (
@@ -11,8 +13,17 @@ function App() {
       <NavBar />
       <main>
         <Switch>
-          <Route path='/categories'>
-            <Categories />
+          <Route path='/types/:type'>
+            <SearchBar />
+          </Route>
+          <Route path='/types'>
+            <Types />
+          </Route>
+          <Route path='/pokedex/:param'>
+            <PokemonInfo />
+          </Route>
+          <Route path='/pokedex'>
+            <PokemonInfo />
           </Route>
           <Route exact path='/'>
             <Home />
