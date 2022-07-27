@@ -17,9 +17,10 @@
     font-size: 3.2rem;
     font-weight: 400;
     position: absolute;
-    top: 27.5%;
+    top: 32.5%;
     left: 61.5%;
     width: 30%;
+    margin: 0;
 }
 
 .pokemon-info .p {
@@ -27,10 +28,12 @@
 }
 
 .pokemon-info .id {
+    margin: 0;
     color: hsl(0, 0%, 20%);
+    text-shadow: 0.2rem 0.1rem black;
     width: 6.5rem;
     position: absolute;
-    top: 81%;
+    top: 84%;
     left: 17%;
 }
 
@@ -48,21 +51,46 @@
     height: 6.4rem;
     background-color: hsl(200, 90%, 60%);
     border: 0.3rem solid hsl(220, 75%, 40%);
-    border-radius: 0.5rem;
+    border-radius: 1rem;
 }
 
-.pokemon-info .type1 {
-    font-size: 2.4rem;
+.pokemon-info .types {
+    background-color: hsl(0, 0%, 20%);
+    width: 13rem;
+    height: 5.2rem;
     position: absolute;
-    top: 66%;
-    left: 60%;
+    top: 70%;
+    left: 60.3%;
+    border: 0.3rem solid hsl(0, 0%, 20%);
+    border-radius: 1rem;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 100%;
 }
 
-.pokemon-info .type2 {
-    font-size: 2.4rem;
+.pokemon-info .type-button {
+    position: relative;
+    font-family: Oxanium, cursive;
+    margin-left: 0.3rem;
+    width: 6rem;
+    height: 5rem;
+    background-color: hsl(0, 0%, 90%);
+    border: 0;
+    border-radius: 1rem;
+    box-shadow: -0.3rem 0.3rem gray;
+}
+
+.pokemon-info .type-button:active {
+    box-shadow: 0rem 0rem gray;
+    transform: translate(-0.3rem, 0.3rem);
+}
+
+.pokemon-info .type1, .pokemon-info .type2 {
+    height: 4.2rem;
     position: absolute;
-    top: 66%;
-    left: 68%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .pokemon-info .button {
@@ -75,7 +103,7 @@
     background-color: hsl(0, 0%, 20%);
     box-shadow: -0.2rem 0.2rem hsl(0, 0%, 15%), -0.4rem 0.4rem hsl(0, 0%, 10%);
     border: 0.1rem solid hsl(0, 0%, 0%);
-    border-radius: 0.5rem;
+    border-radius: 1rem;
 }
 
 .pokemon-info .button:active {
