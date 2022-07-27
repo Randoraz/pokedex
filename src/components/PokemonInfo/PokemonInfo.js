@@ -22,7 +22,7 @@ export function PokemonInfo() {
                     setPokemon(pokemon);
                     setFoundPokemon(true);
                     setTerm(pokemon.name);
-                    console.log(pokemon);
+                    //console.log(pokemon);
                 } else {
                     setFoundPokemon(false);
                 }
@@ -68,8 +68,8 @@ export function PokemonInfo() {
                     placeholder='name or number'
                     onChange={handleChange} />
             </form>
-            <button className="button prev" onClick={prevButton}>Prev</button>
-            <button className="button next" onClick={nextButton}>Next</button>
+            <button className="button prev" onClick={prevButton}>&lt; Prev</button>
+            <button className="button next" onClick={nextButton}>Next &gt;</button>
         </div>
         :
         <div className="pokemon-info">
