@@ -93,6 +93,33 @@
     transform: translate(-50%, -50%);
 }
 
+.pokemon-info .shiny-button {
+    padding: 0.3rem 0 0;
+    line-height: 1rem;
+    font-family: Oxanium, cursive;
+    color: white;
+    font-size: 3.2rem;
+    text-align: center;
+    position: absolute;
+    top: 60.5%;
+    left: 13.5%;
+    width: 3.5rem;
+    height: 3.5rem;
+    border-radius: 50%;
+    border: 0.2rem solid hsl(340, 90%, 10%);
+}
+
+.pokemon-info .on {
+    background-color: hsl(340, 90%, 30%);
+    transform: translate(-0.2rem, 0.2rem);
+    box-shadow: 0 0;
+}
+
+.pokemon-info .off {
+    background-color: hsl(340, 90%, 45%);
+    box-shadow: -0.2rem 0.2rem hsl(340, 90%, 10%);
+}
+
 .pokemon-info .button {
     font-family: Oxanium, cursive;
     text-align: center;

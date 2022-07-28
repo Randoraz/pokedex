@@ -31,6 +31,7 @@ export function PokemonInfo() {
     const [foundPokemon, setFoundPokemon] = useState(false);
     const [notFoundMessage, setNotFoundMessage] = useState('');
     const [term, setTerm] = useState('');
+    const [shiny, setShiny] = useState(false);
 
     const { param } = useParams();
     const history = useHistory();
@@ -90,6 +91,20 @@ export function PokemonInfo() {
             history.push(`/pokedex/1`);
     };
 
+    const displaySprites = (pokemon) => {
+        if(shiny) {
+            return pokemon.id < 650 ? pokemon.sprites.versions['generation-v']['black-white'].animated.front_shiny
+                : pokemon.sprites.versions['generation-v']['black-white'].front_shiny;
+        }
+        
+        return pokemon.id < 650 ? pokemon.sprites.versions['generation-v']['black-white'].animated.front_default
+                : pokemon.sprites.versions['generation-v']['black-white'].front_default;
+    }
+
+    const shinyButton = () => {
+        setShiny(!shiny);
+    }
+
     const displayTypeImage = (type) => {
         switch(type.type.name) {
             case 'normal':
@@ -138,9 +153,9 @@ export function PokemonInfo() {
         <div className="pokemon-info"> 
             <h2>{loading ? 'Loading...' : captalizeFirstLetter(pokemon.name)}</h2>
             <p className="p id">{loading ? '...' : pokemon.id}</p>
+            <button className={shiny ? "shiny-button on" : "shiny-button off"} onClick={shinyButton}>&#10022;</button>
             <div className="img-div">
-                <img className="pokemon-img" src={pokemon.id < 650 ? pokemon.sprites.versions['generation-v']['black-white'].animated.front_default
-                                                 : pokemon.sprites.versions['generation-v']['black-white'].front_default} alt={pokemon.name} />
+                <img className="pokemon-img" src={displaySprites(pokemon)} alt={pokemon.name} />
             </div>
             <div className="types">
                 <div className="cell-div">
