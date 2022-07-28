@@ -42,6 +42,8 @@ export const getPokemon = async (param) => {
             .then(response => {
                 if(response.ok)
                     return response.json();
+                else
+                    return 'Not found...';
             });
         return pokemon;
     } catch(error) {

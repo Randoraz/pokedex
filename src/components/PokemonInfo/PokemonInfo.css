@@ -125,10 +125,19 @@
     font-size: 2.4rem;
 }
 
-.pokemon-info img {
+.pokemon-info .img-div {
     position: absolute;
-    top: 36%;
-    left: 18%;
-    height: 20%;
-    transform: translate(-15%, 0);
+    top: 44.5%;
+    left: 27%;
+    
+}
+
+.pokemon-info .pokemon-img {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1.5);
+    max-width: 13rem;
+    max-height: 10rem;
 }

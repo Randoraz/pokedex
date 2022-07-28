@@ -27,7 +27,9 @@ import fairy from '../../images/Types/GO_Fairy.webp';
 
 export function PokemonInfo() {
     const [pokemon, setPokemon] = useState({});
+    const [loading, setLoading] = useState(false);
     const [foundPokemon, setFoundPokemon] = useState(false);
+    const [notFoundMessage, setNotFoundMessage] = useState('');
     const [term, setTerm] = useState('');
 
     const { param } = useParams();
@@ -36,15 +38,21 @@ export function PokemonInfo() {
     useEffect(() => {
         if(param) {
             const getPokemonInfo = async () => {
+                setLoading(true);
                 const pokemon = await getPokemon(param);
-                if(pokemon) {
+                if(typeof pokemon === 'object') {
                     setPokemon(pokemon);
                     setFoundPokemon(true);
                     setTerm(pokemon.name);
                     console.log(pokemon);
+                } else if(typeof pokemon === 'string') {
+                    setFoundPokemon(false);
+                    setNotFoundMessage(pokemon);
                 } else {
                     setFoundPokemon(false);
                 }
+
+                setLoading(false);
             }
 
             getPokemonInfo();
@@ -128,9 +136,12 @@ export function PokemonInfo() {
     return (
         foundPokemon ? //Use ? to check if variable exists before using 'map'
         <div className="pokemon-info"> 
-            <h2>{captalizeFirstLetter(pokemon.name)}</h2>
-            <p className="p id">{pokemon.id}</p>
-            <img src={pokemon.sprites.versions['generation-v']['black-white'].animated.front_default} alt={pokemon.name} />
+            <h2>{loading ? 'Loading...' : captalizeFirstLetter(pokemon.name)}</h2>
+            <p className="p id">{loading ? '...' : pokemon.id}</p>
+            <div className="img-div">
+                <img className="pokemon-img" src={pokemon.id < 650 ? pokemon.sprites.versions['generation-v']['black-white'].animated.front_default
+                                                 : pokemon.sprites.versions['generation-v']['black-white'].front_default} alt={pokemon.name} />
+            </div>
             <div className="types">
                 <div className="cell-div">
                     <button className="type-button" onClick={type1Button}>{displayTypeImage(pokemon.types[0])}</button>
@@ -152,6 +163,7 @@ export function PokemonInfo() {
         </div>
         :
         <div className="pokemon-info">
+            <h2>{loading ? 'Loading...' : notFoundMessage ? notFoundMessage : 'Waiting...'}</h2>
             <div className="types">
                 <div className="cell-div">
                     <button className="type-button"></button>
