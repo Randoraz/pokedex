@@ -27,7 +27,7 @@ function App() {
           <Route path='/pokedex'>
             <PokemonInfo />
           </Route>
-          <Route exact path='/'>
+          <Route path='/home'>           {/*For GitHub Pages */}
             <Home />
           </Route>
         </Switch>
