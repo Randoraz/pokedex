@@ -1,30 +1,44 @@
-.h2 {
+.types-div h2 {
     font-size: 3.2rem;
     text-align: center;
     font-weight: 400;
     margin: 1.6rem auto;
 }
 
-.list {
+.types-div .list {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
     height: 32rem;
     width: 100%;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     text-align: left;
     padding-inline-start: 0;
 }
 
-.type-list {
+.types-div .type-list {
     list-style: disc;
     margin: 1.6rem 0;
     width: 15%;
 }
 
-.link-type {
+.types-div .link-type {
     text-decoration: none;
     color: hsl(0, 70%, 50%);
     font-size: 2.4rem;
+}
+
+@media only screen and (max-width: 550px) {
+    .types-div .list {
+        height: 28rem;
+    }
+
+    .types-div .type-list {
+        margin: 1.2rem 0;
+    }
+
+    .types-div .link-type {
+        font-size: 1.6rem;
+    }
 }

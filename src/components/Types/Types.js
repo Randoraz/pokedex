@@ -18,8 +18,8 @@ export function Types() {
     }, []);
 
     return (
-        <div>
-            <h2 className="h2">Search by Type</h2>
+        <div className="types-div">
+            <h2>Search by Type</h2>
             <ul className="list">
                 {types ? types.map(type => {
                     return  <li className="type-list" key={type}>

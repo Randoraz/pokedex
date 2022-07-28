@@ -4,8 +4,10 @@
     background-image: url("../../images/pokedex-big.png");
     background-size: contain;
     background-repeat: no-repeat;
-    width: 74.8rem;
-    height: 53.855rem;
+    width: 100%;
+    max-width: 74.8rem;
+    height: calc(5300vw / 74.8);
+    max-height: 53rem;
     position: relative;
     font-family: Oxanium, cursive;
 }
@@ -31,24 +33,26 @@
     margin: 0;
     color: hsl(0, 0%, 20%);
     text-shadow: 0.2rem 0.1rem black;
-    width: 6.5rem;
+    width: 8.7%;
     position: absolute;
-    top: 84%;
+    top: 85%;
     left: 17%;
 }
 
 .pokemon-info form {
     position: absolute;
-    top: 48.8%;
-    left: 60%;
-    width: 32%;
+    top: 51.5%;
+    left: 59.7%;
+    width: 31%;
+    height: 13%;
 }
 
 .pokemon-info input {
+    margin: 0;
     font-family: Oxanium, cursive;
     color: hsl(0, 0%, 20%);
     width: 100%;
-    height: 6.4rem;
+    height: 100%;
     background-color: hsl(200, 90%, 60%);
     border: 0.3rem solid hsl(220, 75%, 40%);
     border-radius: 1rem;
@@ -56,11 +60,11 @@
 
 .pokemon-info .types {
     background-color: hsl(0, 0%, 20%);
-    width: 13rem;
-    height: 5.2rem;
+    width: 17.5%;
+    height: 10%;
     position: absolute;
     top: 70%;
-    left: 60.3%;
+    left: 60%;
     border: 0.3rem solid hsl(0, 0%, 20%);
     border-radius: 1rem;
     display: grid;
@@ -72,8 +76,8 @@
     position: relative;
     font-family: Oxanium, cursive;
     margin-left: 0.3rem;
-    width: 6rem;
-    height: 5rem;
+    width: 91.7%;
+    height: 96%;
     background-color: hsl(0, 0%, 90%);
     border: 0;
     border-radius: 1rem;
@@ -86,7 +90,7 @@
 }
 
 .pokemon-info .type1, .pokemon-info .type2 {
-    height: 4.2rem;
+    height: 84%;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -101,10 +105,10 @@
     font-size: 3.2rem;
     text-align: center;
     position: absolute;
-    top: 60.5%;
-    left: 13.5%;
-    width: 3.5rem;
-    height: 3.5rem;
+    top: 61%;
+    left: 13%;
+    width: 4.7%;
+    height: 6.5%;
     border-radius: 50%;
     border: 0.2rem solid hsl(340, 90%, 10%);
 }
@@ -125,7 +129,7 @@
     text-align: center;
     margin: 0.8rem auto;
     width: 15%;
-    height: 7%;
+    height: 7.5%;
     color: white;
     background-color: hsl(0, 0%, 20%);
     box-shadow: -0.2rem 0.2rem hsl(0, 0%, 15%), -0.4rem 0.4rem hsl(0, 0%, 10%);
@@ -140,15 +144,15 @@
 
 .pokemon-info .prev {
     position: absolute;
-    top: 81.5%;
-    left: 61%;
+    top: 82%;
+    left: 60.5%;
     font-size: 2.4rem;
 }
 
 .pokemon-info .next {
     position: absolute;
-    top: 81.5%;
-    left: 78%;
+    top: 82%;
+    left: 77.5%;
     font-size: 2.4rem;
 }
 
@@ -167,4 +171,25 @@
     transform: translate(-50%, -50%) scale(1.5);
     max-width: 13rem;
     max-height: 10rem;
+}
+
+@media only screen and (max-width: 590px) {
+    .pokemon-info h2 {
+        font-size: 2rem;
+    }
+
+    .pokemon-info p {
+        font-size: 1.6rem;
+    }
+
+    .pokemon-info .id {
+        font-size: 1.6rem;
+    }
+    .pokemon-info .prev, .pokemon-info .next, .pokemon-info .shiny-button {
+        font-size: 1.6rem;
+    }
+
+    .pokemon-info input {
+        font-size: 1.6rem;
+    }
 }
