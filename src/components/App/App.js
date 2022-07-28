@@ -2,6 +2,7 @@ import './App.css';
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { NavBar } from '../NavBar/NavBar';
+import { BackButton } from '../BackButton/BackButton';
 import { Home } from '../Home/Home'
 import { Types } from '../Types/Types';
 import { SearchBar } from '../SearchBar/SearchBar';
@@ -11,6 +12,7 @@ function App() {
   return (
     <Router>
       <NavBar />
+      <BackButton />
       <main>
         <Switch>
           <Route path='/types/:type'>
