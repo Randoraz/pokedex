@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/pokedex/static/css/main.24904316.css",
-    "main.js": "/pokedex/static/js/main.09930267.js",
+    "main.css": "/pokedex/static/css/main.521d76ed.css",
+    "main.js": "/pokedex/static/js/main.08ecbfdf.js",
     "static/js/787.7e0b23c5.chunk.js": "/pokedex/static/js/787.7e0b23c5.chunk.js",
     "static/media/pokedex-big.png": "/pokedex/static/media/pokedex-big.98265affdacf6fed3cdf.png",
     "static/media/GO_Ice.webp": "/pokedex/static/media/GO_Ice.0f6ae961ab8c4879c7de.webp",
@@ -23,12 +23,12 @@
     "static/media/GO_Electric.webp": "/pokedex/static/media/GO_Electric.49f1b1fd98287de9f716.webp",
     "static/media/GO_Grass.webp": "/pokedex/static/media/GO_Grass.92105f8a628e91ad8984.webp",
     "index.html": "/pokedex/index.html",
-    "main.24904316.css.map": "/pokedex/static/css/main.24904316.css.map",
-    "main.09930267.js.map": "/pokedex/static/js/main.09930267.js.map",
+    "main.521d76ed.css.map": "/pokedex/static/css/main.521d76ed.css.map",
+    "main.08ecbfdf.js.map": "/pokedex/static/js/main.08ecbfdf.js.map",
     "787.7e0b23c5.chunk.js.map": "/pokedex/static/js/787.7e0b23c5.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.24904316.css",
-    "static/js/main.09930267.js"
+    "static/css/main.521d76ed.css",
+    "static/js/main.08ecbfdf.js"
   ]
 }
