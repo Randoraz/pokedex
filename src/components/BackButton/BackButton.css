@@ -1,4 +1,5 @@
 .back-button {
+    display: block;
     background-color: hsl(0, 0%, 20%);
     margin-left: 0.2rem;
     margin-bottom: 0.2rem;
@@ -11,4 +12,10 @@
 .back-button:active {
     transform: translate(-0.2rem, 0.2rem);
     box-shadow: 0 0;
+}
+
+@media only screen and (max-width: 425px) and (max-device-aspect-ratio: 1/1) {
+    .back-button {
+        margin-top: 5.3rem;
+    }
 }

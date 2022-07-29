@@ -158,10 +158,10 @@
 
 .pokemon-info .img-div {
     position: absolute;
-    top: 32%;
-    left: 12%;
-    width: 30%;
-    height: 25%;
+    top: 31%;
+    left: 16.5%;
+    width: 19%;
+    height: 28%;
 }
 
 .pokemon-info .pokemon-img {
@@ -170,12 +170,12 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%) scale(1.5);
-    max-width: 13rem;
-    max-height: 10rem;
-    object-fit: contain;
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
 }
 
-@media only screen and (max-width: 760px) {  
+@media only screen and (max-width: 590px) {  
     .pokemon-info h2 {
         font-size: 2rem;
     }
@@ -207,39 +207,40 @@
     }
 
     .pokemon-info .pokemon-img {
+        transform: translate(-50%, -50%) scale(1.1);
+    }
+}
+
+@media only screen and (max-width: 705px) {
+    .pokemon-info .pokemon-img {
+        transform: translate(-50%, -50%) scale(1.2);
+    }
+}
+
+@media only screen and (max-width: 670px) {
+    .pokemon-info .pokemon-img {
+        transform: translate(-50%, -50%) scale(1.1);
+    }
+}
+
+@media only screen and (max-width: 525px) {
+    .pokemon-info .pokemon-img {
         transform: translate(-50%, -50%) scale(1);
     }
 }
 
-@media only screen and (max-width: 425px) and (orientation: portrait) {
+@media only screen and (max-width: 452px) and (max-device-aspect-ratio: 1/1) {
     body {
-        height: 90vh;
+        height: 80vh;
     }
     
     .pokemon-info {
-        transform: rotate(90deg);
-        margin-top: 7rem;
-        left: -15%;
         min-width: 45.2rem;
         min-height: 32rem;
     }
-
-    .pokemon-info .pokemon-img {
-        transform: translate(-50%, -50%) scale(0.9);
-    }
 }
 
-@media only screen and (max-width: 336px) and (orientation: portrait) {
-    .pokemon-info {
-        left: -21%;
-    }
-}
-
-@media only screen and (max-height: 480px) and (orientation: landscape) {
-    main {
-        height: 80vh;
-    }
-
+@media only screen and (max-height: 480px) and (min-device-aspect-ratio: 1/1) {
     .pokemon-info {
         transform: scale(0.7);
         top: -7rem;

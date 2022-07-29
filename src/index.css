@@ -1,5 +1,6 @@
 html {
   font-size: 62.5%;
+  min-width: 45.2rem;
 }
 
 body {
@@ -9,8 +10,8 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  
-  height: 100vh;
+
+  max-height: 100vh;
   background-image: linear-gradient(to bottom, lightblue, white);
   background-repeat: no-repeat;
 }

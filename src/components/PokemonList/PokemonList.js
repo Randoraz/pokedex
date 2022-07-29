@@ -8,7 +8,6 @@ import './PokemonList.css';
 
 export function PokemonList(props) {
     const [term, setTerm] = useState('');
-    const [id, setId] = useState(0);
     const [pokemon, setPokemon] = useState([]);
     const [pokemonToDisplay, setPokemonToDisplay] = useState([]);
 
