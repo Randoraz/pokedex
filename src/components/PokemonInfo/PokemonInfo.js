@@ -91,19 +91,38 @@ export function PokemonInfo() {
             history.push(`/pokedex/1`);
     };
 
-    const displaySprites = (pokemon) => {
+    const ajustImgSize = () => {
         const img = document.querySelector('.pokemon-img');
 
         if(!img)
             return;
 
-        const transform = 'translate(-50%, -50%) scale(1.5)';
-        const specialTransform = 'translate(-50%, -50%) scale(1)';
-        
-        if(pokemon.id >= 899 && pokemon.id <= 905)
-            img.style.transform = specialTransform;
-        else
-            img.style.transform = transform;
+        if(window.screen.width > 705) {
+            if(pokemon.id >= 899 && pokemon.id <= 905)
+                img.style.transform = 'translate(-50%, -50%) scale(1)';
+            else
+                img.style.transform = 'translate(-50%, -50%) scale(1.5)';
+        } else if(window.screen.width <= 705 && window.screen.width > 670) {
+            if(pokemon.id >= 899 && pokemon.id <= 905)
+                img.style.transform = 'translate(-50%, -50%) scale(1)';
+            else
+                img.style.transform = 'translate(-50%, -50%) scale(1.2)';
+        } else if(window.screen.width <= 670 && window.screen.width > 525) {
+            if(pokemon.id >= 899 && pokemon.id <= 905)
+                img.style.transform = 'translate(-50%, -50%) scale(1)';
+            else
+                img.style.transform = 'translate(-50%, -50%) scale(1.1)';
+        } else {
+            if(pokemon.id >= 899 && pokemon.id <= 905)
+                img.style.transform = 'translate(-50%, -50%) scale(1)';
+            else
+                img.style.transform = 'translate(-50%, -50%) scale(1.0)';
+        }
+    }
+    window.addEventListener('resize', ajustImgSize);
+
+    const displaySprites = (pokemon) => {
+        ajustImgSize();
 
         if(shiny) {
             return pokemon.sprites.versions['generation-v']['black-white'].animated.front_shiny ? pokemon.sprites.versions['generation-v']['black-white'].animated.front_shiny : 
