@@ -169,7 +169,7 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%) scale(1.5);
+    /* transform: translate(-50%, -50%) scale(1.5); */
     max-width: 100%;
     max-height: 100%;
     object-fit: cover;
@@ -229,7 +229,7 @@
     }
 }
 
-@media only screen and (max-width: 452px) and (max-device-aspect-ratio: 1/1) {
+@media only screen and (max-width: 452px) {
     body {
         height: 80vh;
     }
@@ -237,13 +237,5 @@
     .pokemon-info {
         min-width: 45.2rem;
         min-height: 32rem;
-    }
-}
-
-@media only screen and (max-height: 480px) and (min-device-aspect-ratio: 1/1) {
-    .pokemon-info {
-        transform: scale(0.7);
-        top: -7rem;
-        margin-top: 0;
     }
 }

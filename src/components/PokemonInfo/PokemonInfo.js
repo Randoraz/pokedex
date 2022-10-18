@@ -92,13 +92,28 @@ export function PokemonInfo() {
     };
 
     const displaySprites = (pokemon) => {
+        const img = document.querySelector('.pokemon-img');
+
+        if(!img)
+            return;
+
+        const transform = 'translate(-50%, -50%) scale(1.5)';
+        const specialTransform = 'translate(-50%, -50%) scale(1)';
+        
+        if(pokemon.id >= 899 && pokemon.id <= 905)
+            img.style.transform = specialTransform;
+        else
+            img.style.transform = transform;
+
         if(shiny) {
-            return pokemon.id < 650 ? pokemon.sprites.versions['generation-v']['black-white'].animated.front_shiny
-                : pokemon.sprites.versions['generation-v']['black-white'].front_shiny;
+            return pokemon.sprites.versions['generation-v']['black-white'].animated.front_shiny ? pokemon.sprites.versions['generation-v']['black-white'].animated.front_shiny : 
+                pokemon.sprites.versions['generation-v']['black-white'].front_shiny ? pokemon.sprites.versions['generation-v']['black-white'].front_shiny : 
+                pokemon.sprites.other["official-artwork"].front_default;
         }
         
-        return pokemon.id < 650 ? pokemon.sprites.versions['generation-v']['black-white'].animated.front_default
-                : pokemon.sprites.versions['generation-v']['black-white'].front_default;
+        return pokemon.sprites.versions['generation-v']['black-white'].animated.front_default ? pokemon.sprites.versions['generation-v']['black-white'].animated.front_default : 
+            pokemon.sprites.versions['generation-v']['black-white'].front_default ? pokemon.sprites.versions['generation-v']['black-white'].front_default : 
+            pokemon.sprites.other["official-artwork"].front_default;
     }
 
     const shinyButton = () => {
@@ -150,7 +165,7 @@ export function PokemonInfo() {
 
     return (
         foundPokemon ? //Use ? to check if variable exists before using 'map'
-        <div className="pokemon-info"> 
+        <div className="pokemon-info" id="pokedex"> 
             <h2>{loading ? 'Loading...' : captalizeFirstLetter(pokemon.name)}</h2>
             <p className="p id">{loading ? '...' : pokemon.id}</p>
             <button className={shiny ? "shiny-button on" : "shiny-button off"} onClick={shinyButton}>&#10022;</button>
